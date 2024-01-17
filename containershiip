@@ -1,0 +1,38 @@
+#include<iostream>
+using namespace std; 
+class one 
+{
+    public:
+    void showone()
+    {
+        cout << " we are to one class \n";
+    }
+};
+class two 
+{
+    public:
+    void showtwo()
+    {
+        cout << " in the two class \n ";
+    }
+};
+class three 
+{
+    one o;
+    two tw;
+    public: 
+    void display()
+    {
+        o.showone();
+        tw.showtwo();
+        cout << " we are in the third and last class " << endl;
+    }
+};
+int main() 
+
+{
+     
+   three t;
+   t.display();
+     return 0;
+}
