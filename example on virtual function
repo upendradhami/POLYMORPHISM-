@@ -1,0 +1,42 @@
+#include<iostream>
+using namespace std; 
+class animal
+{
+    public : 
+    virtual void display()
+    { 
+        cout << " from the base class  animal " << endl;
+    }
+};
+class cow : public animal
+{
+    public: 
+    void display()
+    { 
+        cout << " from the derived class cow  " << endl;
+
+    }
+};
+class dog : public animal 
+{
+    public: 
+    void display()
+    {
+        cout << " from the derived clas dog  " << endl;
+    }
+};
+int main() 
+
+{
+    animal *aptr;
+    animal anm;
+    cow cw;
+    dog dg;
+    aptr= &anm;
+    aptr -> display();
+    aptr = &cw;
+    aptr -> display();
+    aptr = &dg;
+    aptr ->display();
+     return 0;
+}
