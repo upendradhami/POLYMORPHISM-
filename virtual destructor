@@ -1,0 +1,52 @@
+#include<iostream>
+using namespace std; 
+
+class vehicle 
+{
+    public : 
+       vehicle()
+    {
+        cout << " vehicle of constructor is called " << endl;
+    }
+      virtual void showdata()
+      {
+        cout << " you are in vehicle class " << endl;
+      }
+      virtual ~vehicle()
+      {
+        cout << " vehicle destructor is called " << endl;
+      }
+};
+
+
+class car : public vehicle
+{
+    public : 
+       car()
+    {
+        cout << " vehicle of car is called " << endl;
+    }
+       void showdata() override
+      {
+        cout << " you are in car class " << endl;
+      }
+       ~car()
+      {
+        cout << " car destructor is called " << endl;
+      }
+};
+int main() 
+
+{
+     vehicle *vp;
+
+     vp = new vehicle;
+     vp -> showdata();
+     delete vp;
+
+     vp = new car;
+     vp -> showdata();
+     delete vp;
+
+     return 0;
+}
